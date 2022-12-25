@@ -1,4 +1,3 @@
-FROM openjdk:8-jdk-slim
-COPY "./target/lairen-0.0.1-SNAPSHOT.jar" "app.jar"
-EXPOSE 8080
+FROM openjdk:8-alpine
+add target/*.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
